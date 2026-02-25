@@ -40,13 +40,11 @@ function ScreenLayout({
   subtitle: string;
   children?: React.ReactNode;
 }) {
-  const insets = useSafeAreaInsets();
 
   return (
     <SafeAreaView
-      style={styles.screenSafeArea}
-      edges={['left', 'right']}>
-      <View style={[styles.screen, { paddingBottom: 20 + insets.bottom }]}>
+      style={styles.screenSafeArea}>
+      <View style={styles.screen}>
         <View style={styles.card}>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.subtitle}>{subtitle}</Text>
